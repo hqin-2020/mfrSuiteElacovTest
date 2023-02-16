@@ -121,7 +121,7 @@ chiUnderline = str("{:0.3f}".format(params['chiUnderline'])).replace('.', '', 1)
 folder_name = 'chiUnderline_' + chiUnderline + '_a_e_' + a_e + '_a_h_' + a_h  + '_gamma_e_' + gamma_e + '_gamma_h_' + gamma_h + '_psi_e_' + psi_e + '_psi_h_' + psi_h
 
 params['folderName']        = folder_name
-params['preLoad']           = folder_name
+params['preLoad']           = '/project/lhansen/mfrSuite_Ela_midway3/SolvedModels/'+folder_name
 
 #### Now, create a Model
 Model = m.Model(params)
@@ -165,9 +165,6 @@ modelsol = {
 
 pcts = {'W':[.5],'Z':[.5],'V':[.25,.5,.75]}
 
-# 30 year time periods
-T = 1200
-dt = 1/12
 
 # Natural boundatry conditions
 bc = {'natural':True}
@@ -268,7 +265,7 @@ sigmaNhfn = lambda x: np.transpose([vol(x) for vol in sigmaNh])
 
 bc = {'natural':True}
 dt = 1/12
-T = 1200
+T = 360
 
 modelInput = {'muX':muXfn, 'sigmaX':sigmaXfn, 'muG':muCe, 'sigmaG':sigmaCefn, 'muS':muSe, 'sigmaS':sigmaSefn, 'dt':dt, 'T' :T}
 expoElasExpertsC, priceElasExpertsC, _, _, costElasExpertsC, phit1ExpertsC, phit2ExpertsC = computeElas(modelsol['stateMatInput'], modelInput, bc, modelsol['x0'])
