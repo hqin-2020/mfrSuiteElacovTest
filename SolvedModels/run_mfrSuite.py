@@ -34,8 +34,8 @@ params['nShocks']           = 3
 params['numSds']            = 5
 params['uselogW']           = 0
 
-params['nWealth']           = 100
-params['nZ']                = 30
+params['nWealth']           = 70
+params['nZ']                = 20
 params['nV']                = args.nV
 params['nVtilde']           = args.nVtilde
 
