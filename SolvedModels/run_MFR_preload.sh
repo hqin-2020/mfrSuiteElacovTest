@@ -1,9 +1,9 @@
 #! /bin/bash
 
-nV=30
+nV=20
 nVtilde=0
 V_bar=1.0
-Vtilde_bar=1.0
+Vtilde_bar=0.0
 sigma_V_norm=0.132
 sigma_Vtilde_norm=0.0
 
@@ -19,13 +19,13 @@ fi
 
 for chiUnderline in 0.5
 do
-    for a_e in 0.15 0.14
+    for a_e in 0.14
     do
-        for a_h in -1
+        for a_h in -1 -999999999999999
         do
             for gamma_e in 4.0
             do
-                for gamma_h in 6.0 8.0
+                for gamma_h in 8.0
                 do
                     for psi_e in 1.0
                     do
